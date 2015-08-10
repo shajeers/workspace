@@ -6,6 +6,8 @@ import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.Response;
 
+import main.java.model.RestResponse;
+
 @Path("/showData")
 public class ElevateRestService {
 	
@@ -18,5 +20,18 @@ public class ElevateRestService {
 		String result = "reached the Rest Service3 with elevateId : " + elevateId;
 		return Response.status(200).entity(result).build();	  
 	}
+	
+	// Sample URL : http://localhost:8080/elevateServices/rest/showData
+	@GET
+	 @Produces("application/json")
+	public RestResponse showData2()
+	{
+		String result = "reached the Rest Service";
+		
+		RestResponse rr = new RestResponse();
+		rr.setId("2");
+		rr.setDesc(result);
+		return rr;	  
+	}	
 
 }
