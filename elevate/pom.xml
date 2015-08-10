@@ -2,9 +2,38 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>elevate-top-level</groupId>
   <artifactId>elevate</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>1-SNAPSHOT</version>
   <packaging>pom</packaging>
   <modules>
   	<module>../elevateServices</module>
   </modules>
+  <dependencyManagement>
+  	<dependencies>
+  		<dependency>
+  			<groupId>asm</groupId>
+  			<artifactId>asm</artifactId>
+  			<version>3.3.1</version>
+  		</dependency>
+  		<dependency>
+  			<groupId>com.sun.jersey</groupId>
+  			<artifactId>jersey-bundle</artifactId>
+  			<version>1.19</version>
+  		</dependency>
+  		<dependency>
+  			<groupId>org.json</groupId>
+  			<artifactId>json</artifactId>
+  			<version>20140107</version>
+  		</dependency>
+  		<dependency>
+  			<groupId>com.sun.jersey</groupId>
+  			<artifactId>jersey-server</artifactId>
+  			<version>1.19</version>
+  		</dependency>
+  		<dependency>
+  			<groupId>com.sun.jersey</groupId>
+  			<artifactId>jersey-core</artifactId>
+  			<version>1.19</version>
+  		</dependency>
+  	</dependencies>
+  </dependencyManagement>
 </project>
