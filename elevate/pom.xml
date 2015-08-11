@@ -6,6 +6,7 @@
   <packaging>pom</packaging>
   <modules>
   	<module>../elevateServices</module>
+  	<module>../elevateFrontEnd</module>
   </modules>
   <dependencyManagement>
   	<dependencies>
