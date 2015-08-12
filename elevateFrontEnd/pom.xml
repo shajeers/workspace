@@ -29,13 +29,28 @@
   	<groupId>elevate-top-level</groupId>
   	<artifactId>elevate</artifactId>
   	<version>1-SNAPSHOT</version>
-  	<relativePath>../elevate</relativePath>
+  	<relativePath>../elevate/pom.xml</relativePath>
   </parent>
   <dependencies>
   	<dependency>
   		<groupId>javax.servlet</groupId>
   		<artifactId>javax.servlet-api</artifactId>
   		<version>3.1.0</version>
+  	</dependency>
+
+  	<dependency>
+  		<groupId>com.sun.jersey</groupId>
+  		<artifactId>jersey-bundle</artifactId>
+  	</dependency>
+  	<dependency>
+  		<groupId>com.sun.jersey</groupId>
+  		<artifactId>jersey-json</artifactId>
+  		<version>1.19</version>
+  	</dependency>  	
+  	<dependency>
+  		<groupId>elevateCommon</groupId>
+  		<artifactId>elevateCommon</artifactId>
+  		<version>1.1-SNAPSHOT</version>
   	</dependency>
   </dependencies>
 </project>
