@@ -30,7 +30,9 @@ public class ElevateController extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub		
 		ElevateServiceClient esc = new ElevateServiceClient();
-		RestResponse rr = esc.callRestService();
+		//RestResponse rr = esc.callRestService();
+		//esc.callRestServiceWithParam();
+		esc.callRestServiceWithPathParam();
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 
