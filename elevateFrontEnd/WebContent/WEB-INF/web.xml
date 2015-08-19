@@ -9,6 +9,22 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
-  
-  
+  <login-config>
+    <auth-method>FORM</auth-method>
+    <realm-name>my realm</realm-name>
+ 		<form-login-config>
+        	<form-login-page>/views/Login.html</form-login-page>
+        	<form-error-page>/views/LoginError.html</form-error-page>
+    	</form-login-config>
+  </login-config>
+  <servlet>
+    <description></description>
+    <display-name>ElevateControllerSecured</display-name>
+    <servlet-name>ElevateControllerSecured</servlet-name>
+    <servlet-class>main.java.controller.ElevateController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ElevateControllerSecured</servlet-name>
+    <url-pattern>/ElevateControllerSecured</url-pattern>
+  </servlet-mapping>
 </web-app>
