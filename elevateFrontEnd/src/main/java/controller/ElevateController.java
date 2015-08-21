@@ -6,7 +6,12 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import javax.inject.Inject;
+
+
 import main.java.service.ElevateServiceClient;
+import main.java.service.ElevateServiceClientBase;
 
 /**
  * Servlet implementation class ElevateController
@@ -14,6 +19,9 @@ import main.java.service.ElevateServiceClient;
 @WebServlet("/ElevateController")
 public class ElevateController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+	
+	@Inject
+	private ElevateServiceClientBase escb;
 
     /**
      * Default constructor. 
@@ -26,12 +34,12 @@ public class ElevateController extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub		
-		ElevateServiceClient esc = new ElevateServiceClient();
+		// TODO Auto-generated method stub
+
 		//RestResponse rr = esc.callRestService();
 		//esc.callRestServiceWithParam();
-		esc.callRestServiceWithPathParam();
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		escb.callRestServiceWithPathParam();
+		response.getWriter().append("Served1.5 at: ").append(request.getContextPath());
 	}
 
 	/**

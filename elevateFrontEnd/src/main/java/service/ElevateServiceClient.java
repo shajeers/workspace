@@ -1,5 +1,7 @@
 package main.java.service;
 
+import javax.inject.Named;
+
 import com.sun.jersey.api.client.*;
 import com.sun.jersey.api.client.config.ClientConfig;
 import com.sun.jersey.api.client.config.DefaultClientConfig;
@@ -7,7 +9,7 @@ import com.sun.jersey.api.json.JSONConfiguration;
 
 import main.java.model.RestResponse;
 
-public class ElevateServiceClient {
+public class ElevateServiceClient implements ElevateServiceClientBase{
 	
 	public RestResponse callRestService()
 	{
