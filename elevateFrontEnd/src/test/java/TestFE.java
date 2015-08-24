@@ -69,6 +69,9 @@ public class TestFE {
 			String content = new String(Files.readAllBytes(Paths.get("newfile.txt")));
 
 			assertEquals(content, "Served1.5 at: path with ID:A12TEST");
+			
+			//Verify via Mockito that escb.callRestService was called only 1 time
+			verify(escb,times(1)).callRestService();
 
 		} catch (ServletException e) {
 			// TODO Auto-generated catch block
