@@ -28,10 +28,10 @@ public class ElevateRestService {
 	 @Produces(MediaType.APPLICATION_JSON)
 	public RestResponse showData2()
 	{
-		String result = "reached the Rest Service";
+		String result = "reached the Rest Service Desc";
 		
 		RestResponse rr = new RestResponse();
-		rr.setId("2");
+		rr.setId("A343332");
 		rr.setDesc(result);
 		return rr;	  
 	}

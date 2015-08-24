@@ -13,12 +13,9 @@ public class TestRestServices {
 	@Test
 	public void testElevateService()
 	{
-		ElevateRestService ers = new ElevateRestService();
-		
-		RestResponse restResp = ers.showData2();
-		
-		assertEquals("2",restResp.getId());
-		
+		ElevateRestService ers = new ElevateRestService();		
+		RestResponse restResp = ers.showData2();		
+		assertEquals("A343332",restResp.getId());	
 	}
 
 }

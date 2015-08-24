@@ -28,8 +28,7 @@ public class ElevateServiceClient implements ElevateServiceClientBase{
 			}
  
 			rr = response.getEntity(RestResponse.class);
-			System.out.println("ID:"+ rr.getId());
-			System.out.println("Desc:"+rr.getDesc());
+
 			
 
  
